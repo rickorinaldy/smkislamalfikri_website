@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       {% block judul %}
 
@@ -14,25 +15,25 @@
     {% endblock %}
   </head>
   <body style="background-color:#E6E6FA;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-info fixed-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse col" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item active d-md-block d-sm-block">
             <a class="nav-link" href="#">Beranda</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-md-block d-sm-block">
             <a class="nav-link" href="#">Jurusan</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-md-block d-sm-block">
             <a class="nav-link" href="#">Fasilitas</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-md-block d-sm-block">
             <a class="nav-link" href="#">Dokumentasi</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown d-md-block d-sm-block">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Tentang Kami
             </a>
@@ -46,7 +47,7 @@
       <div class="col">
         <a class="navbar-brand" href="#">SMK Islam Al-Fikri</a>
       </div>
-      <div class="col-2">
+      <div class="col-md-2 col-3">
         <a href="#">
           <img src="{% static 'ikon\instagram.png' %}" style="width:24px; height:24px">
         </a>
@@ -64,6 +65,53 @@
     {% block isi %}
 
     {% endblock %}
+    <div class="bg-success" style="margin-top:27px">
+      <div class="row" style="margin-left:20px;margin-right:20px">
+        <div class="col-md-5 offset-md-1 text-light" style="margin-top:60px">
+          <h3>Alamat Kontak</h3>
+          <a href="#">
+            <img src="{% static 'ikon\instagram.png' %}" style="width:24px; height:24px">
+          </a>
+          <a href="#">
+            <img src="{% static 'ikon\facebook.png' %}" style="width:24px; height:24px">
+          </a>
+          <a href="#">
+            <img src="{% static 'ikon\twitter.png' %}" style="width:24px; height:24px">
+          </a>
+          <a href="#">
+            <img src="{% static 'ikon\whatsapp.png' %}" style="width:24px; height:24px">
+          </a>
+          <br><br>
+          <h6>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+            </svg>
+            &emsp;Jl. Lurus RT 02 RW 03 Perumahan Sukses
+          </h6>
+          <h6>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+            </svg>
+            &emsp;081237581032
+          </h6>
+          <h6>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+            </svg>
+            &emsp;smkislamalfikri@mail.com
+          </h6>
+        </div>
+        <div class="col-md-6" style="margin-top:50px;margin-bottom:50px">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8391.21544192856!2d106.54360178845867!3d-6.994399770153454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTknNDQuNCJTIDEwNsKwMzInNDAuNCJF!5e0!3m2!1sen!2sid!4v1612872182731!5m2!1sen!2sid" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark">
+      <div class="container text-center text-white">
+        copyright © 2021 - ricko rinaldy
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
