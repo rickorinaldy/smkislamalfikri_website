@@ -6,16 +6,13 @@
 {% endblock %}
 
 {% block isi %}
-
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active" style="height:600px">
-      <img src="{% static 'gambar\sekolahan depan.jpg' %}" style="background-size:cover;background-position:center;overflow:hidden">
-      <div class="carousel-caption d-md-block">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
+    <div class="carousel-item active" style="max-height:500px">
+      <img class="img-fluid" src="{% static 'gambar\sekolahan depan.jpg' %}" style="overflow:hidden">
+      <p class="carousel-caption d-flex justify-content-center align-items-bottom">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
     </div>
   </div>
 </div>
@@ -25,7 +22,9 @@
   </div>
 
   <div class="d-flex justify-content-center align-items-center">
-    <iframe width="600px" height="300px" src="https://www.youtube.com/embed/8LPI838IsWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="embed-responsive embed-responsive-4by3" style="max-height:800px;max-width:600px">
+      <iframe src="https://www.youtube.com/embed/8LPI838IsWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
 
   <div class="progress" style="margin-top:20px">
@@ -34,48 +33,38 @@
   </div>
 
   <div class="d-flex justify-content-center align-items-center text-dark">
-    <h1>J U R U S A N</h1>
+    <h1>JURUSAN</h1>
   </div>
 
-  <div class="row" style="margin-left:20px;margin-right:20px">
-    <div class="col-md" style="margin-bottom:10px;margin-top:10px">
-      <div class="card text-right">
-        <img src="{% static 'gambar\komputer.jpg' %}" class="card-img-top" style="height:360px;overflow:hidden">
-        <div class="card-body">
-          <h5 class="card-title">Rekayasa Perangkat Lunak</h5>
-          <p class="card-text">
-            Hanya sedikit 'tik-tik-klik' apapun dapat diorganisir dengan indah, bak penyihir tanpa mantra
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-md-6 col-12">
+      <h2>Rekayasa Perangkat Lunak</h2>
+      <p>
+        Hanya sedikit 'tik-tik-klik' apapun dapat diorganisir dengan indah, bak penyihir tanpa mantra
+      </p>
     </div>
-    <div class="col-md" style="margin-top:10px;margin-bottom:10px">
-      <div class="card text-left">
-        <img src="{% static 'gambar\bisnis.jpg' %}" class="card-img-top" style="height:360px;overflow:hidden">
-        <div class="card-body">
-          <h5 class="card-title">Bisnis</h5>
-          <p class="card-text">
-            Membuat perencanaan dan bekerja sama sampai eksekusi sempurna tanpa merugikan pihak manapun untuk menuju kesuksesan
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+    <div class="col-md-6 col-12 d-flex justify-content-center">
+      <img class="img-fluid" src="{% static "gambar\komputer.jpg" %}" style="max-height:300px;width:auto">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-12 d-flex justify-content-center">
+      <img class="img-fluid" src="{% static "gambar\bisnis.jpg" %}" style="max-height:300px;width:auto">
+    </div>
+    <div class="col-md-6 col-12">
+      <h2>Bisnis</h2>
+      <p>
+        Membuat perencanaan dan bekerja sama sampai eksekusi sempurna tanpa merugikan pihak manapun untuk menuju kesuksesan
+      </p>
     </div>
   </div>
 
-  <div class="progress" style="margin-top:20px">
-    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-
-  <div class="d-flex justify-content-center align-items-center text-dark">
-    <h1>F A S I L I T A S</h1>
-  </div>
-
-  <div class="row" style="margin-left:20px;margin-right:20px">
-    <div class="col-md-3 col-6">
-      <div class="card text-white bg-secondary" style="width: 18rem;margin-top:10px;margin-bottom:10px">
+  <div class="row" style="margin-top:50px">
+    <div class="col-md-3 col-12" style="margin-bottom:20px">
+      <div class="card text-white bg-secondary h-100">
+        <svg xmlns="http://www.w3.org/2000/svg" style="max-height:72px;width:auto;margin-top:10px" fill="currentColor" class="bi bi-wrench card-img-top" viewBox="0 0 16 16">
+          <path d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364L.102 2.223zm13.37 9.019l.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11l.471.242z"/>
+        </svg>
         <div class="card-body">
           <h3 class="card-title">Laboratorium</h3>
           <p class="card-text">
@@ -84,8 +73,12 @@
         </div>
       </div>
     </div>
-    <div class="col-md-3 col-6">
-      <div class="card text-white bg-warning" style="width: 18rem;margin-top:10px;margin-bottom:10px">
+    <div class="col-md-3 col-12" style="margin-bottom:20px">
+      <div class="card text-white bg-warning h-100">
+        <svg xmlns="http://www.w3.org/2000/svg" style="max-height:72px;width:auto;margin-top:10px" fill="currentColor" class="bi bi-wifi card-img-top" viewBox="0 0 16 16">
+          <path d="M15.385 6.115a.485.485 0 0 0-.048-.736A12.443 12.443 0 0 0 8 3 12.44 12.44 0 0 0 .663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.717 2.164.204.148.489.13.668-.049z"/>
+          <path d="M13.229 8.271c.216-.216.194-.578-.063-.745A9.456 9.456 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.577 1.336c.205.132.48.108.652-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.472 6.472 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.408.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.611-.091l.015-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .708 0l.707-.707z"/>
+        </svg>
         <div class="card-body">
           <h3 class="card-title">WiFi</h3>
           <p class="card-text">
@@ -94,8 +87,11 @@
         </div>
       </div>
     </div>
-    <div class="col-md-3 col-6">
-      <div class="card text-white bg-danger" style="width: 18rem;margin-top:10px;margin-bottom:10px">
+    <div class="col-md-3 col-12" style="margin-bottom:20px">
+      <div class="card text-white bg-danger h-100">
+        <div class="d-flex justify-content-center">
+          <img src="{% static "ikon\field.svg" %}" style="max-height:72px;width:auto;margin-top:10px">
+        </div>
         <div class="card-body">
           <h3 class="card-title">Lapangan</h3>
           <p class="card-text">
@@ -104,8 +100,12 @@
         </div>
       </div>
     </div>
-    <div class="col-md-3 col-6">
-      <div class="card text-white bg-dark" style="width: 18rem;margin-top:10px;margin-bottom:10px">
+    <div class="col-md-3 col-12" style="margin-bottom:20px">
+      <div class="card text-white bg-dark h-100">
+        <svg xmlns="http://www.w3.org/2000/svg" style="max-height:72px;width:auto;margin-top:10px" fill="currentColor" class="bi bi-award card-img-top" viewBox="0 0 16 16">
+          <path d="M9.669.864L8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193l.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+          <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+        </svg>
         <div class="card-body">
           <h3 class="card-title">Ekstrakurikuler</h3>
           <p class="card-text">
