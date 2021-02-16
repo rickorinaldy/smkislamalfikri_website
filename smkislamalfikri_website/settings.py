@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config, Csv
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4714c@mwi_l6)bwu8l5^y)!7(^rywg%%170-4ju9rdove%rf=^'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['smkislamalfikri.herokuapp.com', '127.0.0.1','localhost']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 # Application definition
@@ -79,11 +80,11 @@ WSGI_APPLICATION = 'smkislamalfikri_website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6d87htbr0f5a0',
-        'USER': 'pyxudprhpqpyqc',
-        'PASSWORD': '49b4481cf586ebff70a627c31cd4b9589792ef2770eeb4c3a65222e09c210d13',
-        'HOST': 'ec2-35-171-57-132.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 'postgres://pyxudprhpqpyqc:49b4481cf586ebff70a627c31cd4b9589792ef2770eeb4c3a65222e09c210d13@ec2-35-171-57-132.compute-1.amazonaws.com:5432/d6d87htbr0f5a0'
