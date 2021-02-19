@@ -21,7 +21,7 @@
 
     {% endblock %}
   </head>
-  <body style="background-color:#E6E6FA;">
+  <body style="background-color:#E6E6FA;position:relative" >
     <nav class="navbar navbar-expand-md navbar-dark bg-info sticky-top">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse col" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Beranda</a>
+              <a class="nav-link" href="{% url 'home' %}">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Jurusan</a>
+              <a class="nav-link" href="#jurusan">Jurusan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Fasilitas</a>
+              <a class="nav-link" href="#fasilitas">Fasilitas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Dokumentasi</a>
@@ -126,7 +126,7 @@
       </div>
       <div class="container text-center text-muted" style="padding-bottom:20px">
         <p style="color:#DCDCDC">
-          copyright © 2021 - ricko rinaldy
+          copyright © 2021 - Neolaia
         </p>
       </div>
     </footer>

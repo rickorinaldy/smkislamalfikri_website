@@ -8,17 +8,17 @@
 {% block isi %}
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active" style="max-height:500px">
+    <div class="carousel-item active" style="max-height:450px">
       <img class="img-fluid" src="{% static 'gambar\sekolahan depan.jpg' %}" style="overflow:hidden">
-      <p class="carousel-caption d-flex justify-content-center align-items-bottom">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
     </div>
   </div>
 </div>
 <div class="container-fluid">
-  <div class="d-flex justify-content-center align-items-center">
-    <h1>SMK ISLAM AL-FIKRI</h1>
+  <div class="jumbotron" style="margin-top:-40px;margin-bottom:-40px">
+    <h1 class="display-4 d-flex justify-content-center">SMK ISLAM AL-FIKRI</h1>
+    <p class="lead d-flex justify-content-center">
+      Sekolah berbasis islam dengan mengedepankan teknologi untuk membangun bisnis yang mumpuni
+    </p>
   </div>
 
   <div class="d-flex justify-content-center align-items-center" style="margin-bottom:50px">
@@ -27,46 +27,39 @@
     </div>
   </div>
 
+  <div id="jurusan"></div>
+
   <div class="row" style="padding-top:50px;padding-bottom:50px;background-color:#7FFFD4">
-    <div class="col-md col-12 " style="max-height:475px">
+    <div class="col-md col-12" style="max-height:475px">
       <div class="card">
-        <div id="img-rpl" class="collapse multi-collapse show">
-          <div class="card-body">
-            <img src="{% static "gambar\komputer.jpg" %}" class="img-fluid" style="max-height:400px">
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div id="img-bisnis" class="collapse multi-collapse">
-          <div class="card-body">
-            <img src="{% static "gambar\bisnis.jpg" %}" class="img-fluid" style="max-height:400px">
-          </div>
+        <div class="card-body">
+          <img src="{% static "gambar\komputer.jpg" %}" class="img-fluid" style="max-height:400px;width:auto">
         </div>
       </div>
     </div>
     <div class="col-md col-12" style="max-height:475px">
+      <h1>Rekayasa Perangkat Lunak</h1>
       <br>
-      <div id="teks-rpl" class="collapse multi-collapse show">
-        <h2>Rekayasa Perangkat Lunak</h2>
-        <p>
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </p>
-        <button class="collapse multi-collapse show btn btn-outline-primary" id="link-rpl" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="true" aria-controls="img-rpl teks-rpl link-rpl">
-          <h4>Bisnis</h4>
-        </button>
-      </div>
-      <div id="teks-bisnis" class="collapse multi-collapse">
-        <h2>Bisnis</h2>
-        <p>
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-        </p>
-        <button class="collapse multi-collapse btn btn-outline-primary collapsed" id="link-bisnis" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="img-bisnis teks-bisnis link-bisnis">
-          <h4>Rekayasa Perangkat Lunak</h4>
-        </button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+
+  <div class="row" style="padding-top:50px;padding-bottom:50px;background-color:#E9967A">
+    <div class="col-md col-12" style="max-height:475px">
+      <h1>Bisnis</h1>
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-md col-12" style="max-height:475px">
+      <div class="card">
+        <div class="card-body">
+          <img src="{% static "gambar\bisnis.jpg" %}" class="img-fluid" style="max-height:400px;width:auto">
+        </div>
       </div>
     </div>
   </div>
-  <div class="container">
+
+  <div id="fasilitas" class="container">
     <div class="row" style="margin-top:50px">
       <div class="col-md col-12" style="margin-bottom:20px">
         <div class="card text-white bg-secondary h-100">
