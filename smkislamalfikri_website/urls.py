@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from beranda import views as bv
+from visimisi import views as vmv
+from profil import views as pv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', bv.home, name='home')
+    path('', bv.home, name='home'),
+    path('visi-misi/', vmv.visimisi, name="visimisi"),
+    path('profil/', pv.profil, name='profil')
 ]

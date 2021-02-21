@@ -11,46 +11,58 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <style>
       h1  {font-family: 'Roboto', sans-serif;}
       p {font-family: 'Montserrat', sans-serif;}
     </style>
+    <style media="screen">
+      @media all and (min-width: 992px) {
+            .navbar .nav-item .dropdown-menu{ display: none; }
+            .navbar .nav-item:hover .nav-link{ color: #fff;  }
+            .navbar .nav-item:hover .dropdown-menu{ display: block; }
+            .navbar .nav-item .dropdown-menu{ margin-top:0; }
+        }
+    </style>
     {% block ext %}
 
     {% endblock %}
   </head>
-  <body style="background-color:#E6E6FA;position:relative" >
-    <nav class="navbar navbar-expand-md navbar-dark bg-info sticky-top">
+  <body style="background-color:#E6E6FA">
+    <nav class="navbar navbar-expand-md navbar-dark bg-info sticky-top btco-hover-menu">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse col" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Beranda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#jurusan">Jurusan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#fasilitas">Fasilitas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Dokumentasi</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Tentang Kami
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Profil</a>
-                <a class="dropdown-item" href="#">Visi & Misi</a>
-              </div>
-            </li>
-          </ul>
+          {% block konten_navbar %}
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Beranda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="jurusan" role="button" data-toggle="dropdown">
+                  Jurusan
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Rekayasa Perangkat Lunak</a>
+                  <a class="dropdown-item" href="#">Bisnis</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Fasilitas</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="about" role="button" data-toggle="dropdown">
+                  Tentang Kami
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'profil' %}">Profil</a>
+                  <a class="dropdown-item" href="{% url 'visimisi' %}">Visi & Misi</a>
+                </div>
+              </li>
+            </ul>
+          {% endblock %}
         </div>
         <div class="col">
           <a class="navbar-brand" href="#">SMK Islam Al-Fikri</a>
@@ -104,20 +116,24 @@
           <h3>Media Sosial</h3>
           <br>
           <h6>
-            <a href="#"><img src="{% static 'ikon\instagram.png' %}" style="width:24px; height:24px"></a>
-            &ensp;@Instagram
+            <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\instagram.png' %}" style="width:24px; height:24px">
+              &ensp;@Instagram
+            </a>
           </h6>
           <h6>
-            <a href="#"><img src="{% static 'ikon\facebook.png' %}" style="width:24px; height:24px"></a>
-            &ensp;FaceBook
+            <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\facebook.png' %}" style="width:24px; height:24px">
+              &ensp;FaceBook
+            </a>
           </h6>
           <h6>
-            <a href="#"><img src="{% static 'ikon\twitter.png' %}" style="width:24px; height:24px"></a>
-            &ensp;@Twitter
+            <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\twitter.png' %}" style="width:24px; height:24px">
+              &ensp;@Twitter
+            </a>
           </h6>
           <h6>
-            <a href="#"><img src="{% static 'ikon\whatsapp.png' %}" style="width:24px; height:24px"></a>
-            &ensp;082111111
+            <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\whatsapp.png' %}" style="width:24px; height:24px">
+              &ensp;082111111
+            </a>
           </h6>
         </div>
         <div class="col-md-5 col-12 embed-responsive embed-responsive-4by3" style="max-height:200px;max-width:400px;margin-bottom:40px;margin-top:50px">

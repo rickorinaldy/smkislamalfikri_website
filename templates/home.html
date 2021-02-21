@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block isi %}
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" style="max-height:450px">
       <img class="img-fluid" src="{% static 'gambar\sekolahan depan.jpg' %}" style="overflow:hidden">
@@ -14,10 +14,10 @@
   </div>
 </div>
 <div class="container-fluid">
-  <div class="jumbotron" style="margin-top:-40px;margin-bottom:-40px">
-    <h1 class="display-4 d-flex justify-content-center">SMK ISLAM AL-FIKRI</h1>
+  <div class="jumbotron" style="margin-top:-35px;margin-bottom:-40px">
+    <h1 class="display-4 d-flex justify-content-center">{{ judul }}</h1>
     <p class="lead d-flex justify-content-center">
-      Sekolah berbasis islam dengan mengedepankan teknologi untuk membangun bisnis yang mumpuni
+      {{ deskripsi_sekolah }}
     </p>
   </div>
 
@@ -26,8 +26,6 @@
       <iframe src="https://www.youtube.com/embed/8LPI838IsWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-
-  <div id="jurusan"></div>
 
   <div class="row" style="padding-top:50px;padding-bottom:50px;background-color:#7FFFD4">
     <div class="col-md col-12" style="max-height:475px">
@@ -40,7 +38,7 @@
     <div class="col-md col-12" style="max-height:475px">
       <h1>Rekayasa Perangkat Lunak</h1>
       <br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p style="font-size:20px">{{ deskripsi_rpl }}</p>
     </div>
   </div>
 
@@ -48,7 +46,7 @@
     <div class="col-md col-12" style="max-height:475px">
       <h1>Bisnis</h1>
       <br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p style="font-size:20px">{{ deskripsi_bisnis }}</p>
     </div>
     <div class="col-md col-12" style="max-height:475px">
       <div class="card">
@@ -59,7 +57,7 @@
     </div>
   </div>
 
-  <div id="fasilitas" class="container">
+  <div class="container">
     <div class="row" style="margin-top:50px">
       <div class="col-md col-12" style="margin-bottom:20px">
         <div class="card text-white bg-secondary h-100">
@@ -69,7 +67,7 @@
           <div class="card-body">
             <h3 class="card-title">Laboratorium</h3>
             <p class="card-text">
-              Peralatan Laboratorium yang canggih, sebagai fasilitas siswa untuk melakukan berbagai eksperimen
+              {{ deskripsi_lab }}
             </p>
           </div>
         </div>
@@ -83,7 +81,7 @@
           <div class="card-body">
             <h3 class="card-title">WiFi</h3>
             <p class="card-text">
-              Internet yang cepat hingga 20Mbps tersedia gratis untuk membantu proses belajar-mengajar dan hiburan siswa
+              {{ deskripsi_wifi }}
             </p>
           </div>
         </div>
@@ -96,7 +94,7 @@
           <div class="card-body">
             <h3 class="card-title">Lapangan</h3>
             <p class="card-text">
-              Lapangan yang luas untuk kegiatan olahraga juga kegiatan lainnya, sebagai fasilitas siswa baik dalam belajar maupun bermain
+              {{ deskripsi_lapangan }}
             </p>
           </div>
         </div>
@@ -110,7 +108,7 @@
           <div class="card-body">
             <h3 class="card-title">Ekstrakurikuler</h3>
             <p class="card-text">
-              Kegiatan ekstra agar siswa lebih aktif dalam mengembangkan minatnya serta bekerja sama mencapai prestasi lebih
+              {{ deskripsi_ekskul }}
             </p>
           </div>
         </div>
