@@ -5,6 +5,10 @@
   {{ judul }}
 {% endblock %}
 
+{% block ext %}
+
+{% endblock %}
+
 {% block isi %}
 <div class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -14,9 +18,9 @@
   </div>
 </div>
 <div class="container-fluid">
-  <div class="jumbotron" style="margin-top:-35px;margin-bottom:-40px">
-    <h1 class="display-4 d-flex justify-content-center">{{ judul }}</h1>
-    <p class="lead d-flex justify-content-center">
+  <div class="jumbotron" style="background-color:#FFFFE0">
+    <h1 class="d-flex justify-content-center" style="text-align:center">Sekolah Menengah Kejuruan Islam Al-Fikri</h1>
+    <p class="lead d-flex justify-content-center" style="text-align:center">
       {{ deskripsi_sekolah }}
     </p>
   </div>
@@ -35,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md col-12" style="max-height:475px">
+    <div class="col-md col-12" style="max-height:475px;text-align:center">
       <h1>Rekayasa Perangkat Lunak</h1>
       <br>
       <p style="font-size:20px">{{ deskripsi_rpl }}</p>
@@ -43,7 +47,7 @@
   </div>
 
   <div class="row" style="padding-top:50px;padding-bottom:50px;background-color:#E9967A">
-    <div class="col-md col-12" style="max-height:475px">
+    <div class="col-md col-12" style="max-height:475px;text-align:center">
       <h1>Bisnis</h1>
       <br>
       <p style="font-size:20px">{{ deskripsi_bisnis }}</p>

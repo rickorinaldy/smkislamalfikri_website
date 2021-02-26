@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block judul %}
+  Visi & Misi - SMK Islam Al-Fikri
+{% endblock %}
+
 {% block ext %}
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Kanit:wght@600;900&display=swap" rel="stylesheet">
@@ -16,7 +20,7 @@
 
 {% block isi %}
   <div class="container-fluid">
-    <div class="row jumbotron">
+    <div class="row jumbotron" style="background-color:white">
       <div class="mx-auto">
         <h1 class="display-4">Visi</h1>
         <br>
@@ -25,10 +29,7 @@
           <li>Menjunjung..</li>
           <li>Menghidupkan...</li>
         </ol>
-      </div>
-    </div>
-    <div class="row jumbotron">
-      <div class="mx-auto">
+        <br><br>
         <h1 class="display-4">Misi</h1>
         <br>
         <ol style="margin-left:-27px">
