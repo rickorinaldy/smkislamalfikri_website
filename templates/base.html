@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&family=Noto+Sans+JP:wght@500&family=Brygada+1918:wght@700&display=swap" rel="stylesheet">
 
     <style media="screen">
+      html {
+        scroll-behavior: smooth;
+      }
       h1  {font-family: 'Brygada 1918', serif;}
       p {font-family: 'Montserrat', sans-serif;}
 
@@ -63,7 +66,7 @@
 
     {% endblock %}
   </head>
-  <body>
+  <body style="background-color:#F0F8FF">
     <div id="loading">
       <img src="{% static "gambar\profile.png" %}" alt="">
     </div>
@@ -79,22 +82,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}">Beranda</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="jurusan" role="button" data-toggle="dropdown">Jurusan</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Rekayasa Perangkat Lunak</a>
-                  <a class="dropdown-item" href="#">Bisnis</a>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Registrasi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Fasilitas</a>
+                <a class="nav-link" href="{% url 'profil' %}">Profil</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="about" role="button" data-toggle="dropdown">Tentang Kami</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{% url 'profil' %}">Profil</a>
-                  <a class="dropdown-item" href="{% url 'visimisi' %}">Visi & Misi</a>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'visimisi' %}">Visi & Misi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kontak">Hubungi Kami</a>
               </li>
             </ul>
             {% endblock %}
@@ -121,66 +119,66 @@
       {% block isi %}
 
       {% endblock %}
-      <footer class="footer" style="margin-top:27px;background-color:#4682B4">
-      <div class="row justify-content-center" style="margin-left:20px;margin-right:20px">
-        <div class="col-md-4 col-12 text-light" style="margin-top:50px">
-          <h3>Kontak</h3>
-          <br>
-          <h6>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-            </svg>
-            &ensp;Jl. Lurus RT 02 RW 03 Perumahan Sukses
-          </h6>
-          <h6>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-            </svg>
-            &ensp;081237581032
-          </h6>
-          <h6>
-            <a>
-              <svg width="16" height="16" fill="currentColor" class="bi bi-envelope-fill">
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"></path>
+      <footer id="kontak" class="footer" style="margin-top:27px;background-color:#4682B4">
+        <div class="row justify-content-center" style="margin-left:20px;margin-right:20px">
+          <div class="col-md-4 col-12 text-light" style="margin-top:50px">
+            <h3>Kontak</h3>
+            <br>
+            <h6>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
               </svg>
-            </a>
-            &ensp;smkislamalfikri@mail.com
-          </h6>
+              &ensp;Jl. Lurus RT 02 RW 03 Perumahan Sukses
+            </h6>
+            <h6>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+              &ensp;081237581032
+            </h6>
+            <h6>
+              <a>
+                <svg width="16" height="16" fill="currentColor" class="bi bi-envelope-fill">
+                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"></path>
+                </svg>
+              </a>
+              &ensp;alfikrismkislam@gmail.com
+            </h6>
+          </div>
+          <div class="col-md-3 col-12 text-light" style="margin-top:50px">
+            <h3>Media Sosial</h3>
+            <br>
+            <h6>
+              <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\instagram.png' %}" style="width:24px; height:24px">
+                &ensp;@Instagram
+              </a>
+            </h6>
+            <h6>
+              <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\facebook.png' %}" style="width:24px; height:24px">
+                &ensp;FaceBook
+              </a>
+            </h6>
+            <h6>
+              <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\twitter.png' %}" style="width:24px; height:24px">
+                &ensp;@Twitter
+              </a>
+            </h6>
+            <h6>
+              <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\whatsapp.png' %}" style="width:24px; height:24px">
+                &ensp;082111111
+              </a>
+            </h6>
+          </div>
+          <div class="col-md-5 col-12 embed-responsive embed-responsive-4by3" style="max-height:200px;max-width:400px;margin-bottom:40px;margin-top:50px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8391.21544192856!2d106.54360178845867!3d-6.994399770153454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTknNDQuNCJTIDEwNsKwMzInNDAuNCJF!5e0!3m2!1sen!2sid!4v1612872182731!5m2!1sen!2sid" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
         </div>
-        <div class="col-md-3 col-12 text-light" style="margin-top:50px">
-          <h3>Media Sosial</h3>
-          <br>
-          <h6>
-            <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\instagram.png' %}" style="width:24px; height:24px">
-              &ensp;@Instagram
-            </a>
-          </h6>
-          <h6>
-            <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\facebook.png' %}" style="width:24px; height:24px">
-              &ensp;FaceBook
-            </a>
-          </h6>
-          <h6>
-            <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\twitter.png' %}" style="width:24px; height:24px">
-              &ensp;@Twitter
-            </a>
-          </h6>
-          <h6>
-            <a href="#" class="text-light" style="text-decoration: none"><img src="{% static 'ikon\whatsapp.png' %}" style="width:24px; height:24px">
-              &ensp;082111111
-            </a>
-          </h6>
+        <div class="container text-center text-muted" style="padding-bottom:20px">
+          <p style="color:#DCDCDC">
+            © 2021 Neolaia - Ricko Rinaldy
+          </p>
         </div>
-        <div class="col-md-5 col-12 embed-responsive embed-responsive-4by3" style="max-height:200px;max-width:400px;margin-bottom:40px;margin-top:50px">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8391.21544192856!2d106.54360178845867!3d-6.994399770153454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTknNDQuNCJTIDEwNsKwMzInNDAuNCJF!5e0!3m2!1sen!2sid!4v1612872182731!5m2!1sen!2sid" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-      </div>
-      <div class="container text-center text-muted" style="padding-bottom:20px">
-        <p style="color:#DCDCDC">
-          © 2021 Neolaia - Ricko Rinaldy
-        </p>
-      </div>
-    </footer>
+      </footer>
     </div>
   </body>
 </html>

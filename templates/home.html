@@ -6,29 +6,63 @@
 {% endblock %}
 
 {% block ext %}
+ <style media="screen">
+   .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 30%;
+      color:white;
+    }
+    .separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-bottom:2vw;
+      margin-top:4vw
+    }
 
+    .separator::before,
+    .separator::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #000;
+      margin-right: 3em;
+      margin-left: 3em;
+    }
+
+    .separator:not(:empty)::before {
+      margin-right: 2em;
+    }
+
+    .separator:not(:empty)::after {
+      margin-left: 2em;
+    }
+ </style>
 {% endblock %}
 
 {% block isi %}
-<div class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="max-height:450px">
-      <img class="img-fluid" src="{% static 'gambar\sekolahan depan.jpg' %}" style="overflow:hidden">
-    </div>
-  </div>
+<div class="jumbotron parallax jumbotron-fluid" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('{% static "gambar/sekolahan depan2.jpg" %}');margin-bottom:5px">
+  <h1 class="d-flex justify-content-center" style="text-align:center;">Sekolah Menengah Kejuruan Islam Al-Fikri</h1>
+  <p class="lead d-flex justify-content-center" style="text-align:center">
+    {{ deskripsi_sekolah }}
+  </p>
 </div>
+
 <div class="container-fluid">
-  <div class="jumbotron" style="background-color:#FFFFE0">
-    <h1 class="d-flex justify-content-center" style="text-align:center">Sekolah Menengah Kejuruan Islam Al-Fikri</h1>
-    <p class="lead d-flex justify-content-center" style="text-align:center">
-      {{ deskripsi_sekolah }}
-    </p>
+  <div class="separator">
+    <h1>TENTANG SEKOLAH</h1>
   </div>
 
   <div class="d-flex justify-content-center align-items-center" style="margin-bottom:50px">
     <div class="embed-responsive embed-responsive-4by3" style="max-height:800px;max-width:600px">
       <iframe src="https://www.youtube.com/embed/8LPI838IsWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+  </div>
+
+  <div class="separator">
+    <h1>JURUSAN</h1>
   </div>
 
   <div class="row" style="padding-top:50px;padding-bottom:50px;background-color:#7FFFD4">
@@ -61,8 +95,12 @@
     </div>
   </div>
 
+  <div class="separator">
+    <h1>FASILITAS</h1>
+  </div>
+
   <div class="container">
-    <div class="row" style="margin-top:50px">
+    <div class="row">
       <div class="col-md col-12" style="margin-bottom:20px">
         <div class="card text-white bg-secondary h-100">
           <svg xmlns="http://www.w3.org/2000/svg" style="max-height:72px;width:auto;margin-top:10px" fill="currentColor" class="bi bi-wrench card-img-top" viewBox="0 0 16 16">
